@@ -12,6 +12,11 @@
   </head>
   <body>
     <nav>
+      <div class="trans-lan-grp">
+        <a href="#">EN</a>
+        <span>ㅣ</span>
+        <a href="#">KR</a>
+      </div>
       <div class="nav-container noto-sans-kr">
         <!-- logo -->
         <div class="logo-img">
@@ -43,9 +48,9 @@
         </div>
         <!-- login-signup -->
         <div class="login-signup-container noto-sans-kr">
-          <a href="#" title="로그인">sign in</a>
+          <a href="#" title="로그인" class="member" id="login">sign in</a>
           <span>ㅣ</span>
-          <a href="#" title="회원가입">sign up</a>
+          <a href="#" title="회원가입" class="member" id="resis">sign up</a>
         </div>
         <!-- tablet mobile 사이즈에서 보여질 버튼 -->
         <div class="hamburger-btn">
@@ -53,6 +58,14 @@
         </div>
       </div>
     </nav>
+    <div class="map-container">
+      <div class="map" id="map"></div>
+    </div>
     <script src="script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhb2f9PlOajXykuXRiBvX3uKwe6gkZYgs&callback=initMap"
+      async
+      defer
+    ></script>
   </body>
 </html>
