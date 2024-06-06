@@ -1,0 +1,156 @@
+/* ============================================================
+   Common Style config
+   ============================================================ */
+
+:root {
+  --current-height: 44px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   style 
+   ============================================================ */
+
+.wrapper {
+  display: flex;
+}
+
+.slot-machine {
+  height: var(--current-height);
+  width: 1.85em;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.slot-machine__container {
+  animation: slot-machine-animation 12s cubic-bezier(0.25, 0.1, 0.25, 1)
+    infinite;
+}
+
+.slot-machine__letter {
+  background-color: antiquewhite;
+  height: var(--current-height);
+  line-height: var(--current-height);
+  text-align: center;
+}
+
+@keyframes slot-machine-animation {
+  0%,
+  16.666%,
+  100% {
+    transform: translateY(0);
+  }
+  33.333%,
+  50% {
+    transform: translateY(calc(var(--current-height) * -7));
+  }
+  66.666%,
+  83.333% {
+    transform: translateY(calc(var(--current-height) * -7));
+  }
+}
+
+@media (min-width: 576px) {
+  .slot-machine__letter {
+    font-size: 22px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 992px) {
+  .slot-machine__letter {
+    font-size: 28px;
+    font-weight: 700;
+  }
+}
+
+/* ============================================================
+   Animation delay config
+   ============================================================ */
+
+.text_02 .slot-machine__container {
+  animation-delay: 0.1s;
+}
+
+.text_03 .slot-machine__container {
+  animation-delay: 0.12s;
+}
+
+.text_04 .slot-machine__container {
+  animation-delay: 0.12s;
+}
+
+.text_05 .slot-machine__container {
+  animation-delay: 0.14s;
+}
+
+.text_06 .slot-machine__container {
+  animation-delay: 0.16s;
+}
+
+.text_07 .slot-machine__container {
+  animation-delay: 0.18s;
+}
+
+.text_08 .slot-machine__container {
+  animation-delay: 0.2s;
+}
+
+.text_09 .slot-machine__container {
+  animation-delay: 0.22s;
+}
+
+.text_10 .slot-machine__container {
+  animation-delay: 0.24s;
+}
+
+.text_11 .slot-machine__container {
+  animation-delay: 0.26s;
+}
+
+.text_12 .slot-machine__container {
+  animation-delay: 0.28s;
+}
+
+.text_13 .slot-machine__container {
+  animation-delay: 0.3s;
+}
+
+.text_14 .slot-machine__container {
+  animation-delay: 0.32s;
+}
+
+.text_15 .slot-machine__container {
+  animation-delay: 0.34s;
+}
+
+.text_16 .slot-machine__container {
+  animation-delay: 0.36s;
+}
+
+.text_17 .slot-machine__container {
+  animation-delay: 0.38s;
+}
+
+.text_18 .slot-machine__container {
+  animation-delay: 0.4s;
+}
+
+.text_19 .slot-machine__container {
+  animation-delay: 0.42s;
+}
