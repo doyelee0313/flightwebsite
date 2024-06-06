@@ -25,12 +25,17 @@ btn.forEach((button) => {
 });
 
 /* 구글 지도 생성 */
+window.initMap = function () {
+  //구글에서 지원하는 Map클래스의 인스턴스(지도)를 만들어 map에 할당함
+  const map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 24.625327, lng: 134.5692373 },
+    zoom: 3.15,
+  });
 
-function initMap() {
-  // 구글 지도
-  const mapOptions = {
-    center: new google.maps.LatLng(51.508742, -0.12085), // 위도랑 경도
-    zoom: 3,
-  };
-  const map = new google.maps.Map(document.getElementById("map"), mapOptions);
-}
+  new google.maps.Marker({
+    //지도 마크업
+    position: { lat: 51.528607, lng: -0.4312394 },
+    label: "런던",
+    map: map,
+  });
+};
