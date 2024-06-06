@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/searchBar.css" />
+    <script src="../searchBar.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/7fd818e661.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>project</title>
+  </head>
+  <body>
+    <div class="ticketing_container" onmouseover="changeColor()">
+      <form method="GET" action="" class="destination_box">
+        <label for="destination">
+          <small>여행지</small>
+          <input type="search" name="query" placeholder="여행지 검색" />
+        </label>
+      </form>
+      <span class="separator separator1"></span>
+      <div class="checkIn_container">
+        <div class="checkIn_box">
+          <small>체크인</small>
+          <span>날짜 추가</span>
+        </div>
+      </div>
+      <span class="separator separator2"></span>
+      <div class="checkOut_container">
+        <div class="checkOut_box">
+          <small>체크아웃</small>
+          <span>날짜 추가</span>
+        </div>
+      </div>
+      <span class="separator separator3"></span>
+      <div class="guest_container">
+        <div class="guest_box">
+          <small>여행자</small>
+          <span>게스트 추가</span>
+        </div>
+      </div>
+      <button class="ticketing_btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </body>
+</html>

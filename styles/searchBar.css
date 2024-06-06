@@ -1,0 +1,192 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.ticketing_container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 33px;
+  border: 1px solid #ddd;
+  display: flex;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  max-width: 850px;
+  width: 100%;
+  position: relative;
+
+  & small {
+    padding-bottom: 2px;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  & span {
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 14px;
+    color: #222;
+  }
+}
+
+.separator1,
+.separator2,
+.separator3 {
+  border: 0.5px solid #ddd;
+  height: 32px;
+  width: 0;
+}
+
+.ticketing_container:hover {
+  background-color: white;
+
+  & #separator {
+    display: none;
+  }
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.destination_box {
+  border-radius: 32px;
+  flex: 2;
+  height: 100%;
+
+  & label {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 32px;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  & input {
+    padding: 0;
+  }
+
+  & input::placeholder {
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 14px;
+    color: #222;
+  }
+}
+
+.destination_box:hover {
+  background-color: #ddd;
+
+  & input {
+    background-color: #ddd;
+  }
+}
+
+.checkIn_container {
+  border-radius: 32px;
+  cursor: pointer;
+  flex: 1;
+  height: 100%;
+}
+
+.checkIn_container:hover {
+  background-color: #ddd;
+}
+
+.checkIn_box {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 14px 24px;
+}
+
+.checkOut_container {
+  border-radius: 32px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.checkOut_container:hover {
+  background-color: #ddd;
+}
+
+.checkOut_box {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 24px;
+}
+
+.guest_container {
+  border-radius: 32px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 2;
+  /* width: auto; */
+}
+
+.guest_container:hover {
+  background-color: #ddd;
+}
+
+.guest_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 24px;
+}
+
+.ticketing_btn {
+  position: absolute;
+  right: 0;
+  border: none;
+  border-radius: 24px;
+  background-color: #ff385c;
+  color: white;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+/* ============================================================
+   separator display Styles
+   ============================================================ */
+
+.destination_box:hover + .separator {
+  visibility: hidden;
+}
+
+.separator.hidden {
+  visibility: hidden;
+}
