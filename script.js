@@ -24,6 +24,46 @@ btn.forEach((button) => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', (event) => {
+  const items = document.querySelectorAll('.category a');
+  const views = document.querySelectorAll('.view > div');
+
+  items.forEach((item, index) => {
+      item.addEventListener('mouseover', () => {
+          views.forEach((view, viewIndex) => {
+              if (index === viewIndex) {
+                  view.style.display = 'block';
+              } else {
+                  view.style.display = 'none';
+              }
+          });
+      });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+          event.preventDefault();
+          navLinks.forEach((navLink) => navLink.classList.remove('active'));
+          link.classList.add('active');
+      });
+  });
+});
+
+  item.addEventListener('click', (event) => {
+      event.preventDefault();
+      views.forEach((view, viewIndex) => {
+          if (index === viewIndex) {
+              view.style.display = 'block';
+          } else {
+              view.style.display = 'none';
+          }
+          });
+      });
+  });
+});
+
 /* 구글 지도 생성 */
 
 function initMap() {
