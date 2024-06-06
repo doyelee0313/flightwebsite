@@ -26,6 +26,10 @@ footer {
   width: 118px;
   height: 42px;
 }
+.ft-icon {
+  width: 32px;
+  height: 32px;
+}
 
 
 
@@ -38,6 +42,16 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+}
+.footer-terms a {
+  color: #333;
+  text-decoration: none;
+}
+.footer-terms a:hover {
+  text-decoration: underline;
+}
+.footer-terms-txt2 {
+  font-weight: 900;
 }
 
 @media screen and (max-width:800px) {
