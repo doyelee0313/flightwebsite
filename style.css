@@ -1,4 +1,81 @@
-html {
+.nav-tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-item .nav-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    color: #6A6A6A;
+}
+.nav-item .nav-link span {
+    display: block;
+    margin-top: 4px;
+    color: #6A6A6A;
+}
+.icon-large {
+    font-size: 2rem; /* Adjust the size as needed */
+}
+.nav-item .nav-link:hover, .nav-item .nav-link.active {
+    transform: scale(1.1);
+    color: #FF385C;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-  }
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity and color as needed */
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay .over_box {
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay .over_box a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.overlay .over_box a:hover {
+    text-decoration: underline;
+}
+
+/* Optional: If you want a fixed height for the cards, adjust as needed */
+.card {
+    height: 800px; /* Example fixed height */
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+.banner {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa; /* Optional background color */
+    margin-bottom: 20px; /* Adjust as needed */
+}
+.banner h1 {
+    font-size: 28px; /* Adjust font size as desired */
+    color: #333; /* Text color */
+    margin: 0;
+    padding: 0;
+}
