@@ -279,5 +279,14 @@ footer {
   .only-mobile-txt {
     display: block;
   }
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #dedede;
+  }
+  .footer-info {
+    display: flex;
+    text-align: center;
+  }
 
 }
