@@ -253,6 +253,9 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
 }
+.only-mobile-txt {
+  display: none;
+}
 .footer-terms a {
   color: #333;
   text-decoration: none;
@@ -269,8 +272,12 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .footer-info p {
-    
+  .footer-box1,
+  .footer-box2 {
+    display: none;
+  }
+  .only-mobile-txt {
+    display: block;
   }
 
 }
