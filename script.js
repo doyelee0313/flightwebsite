@@ -74,3 +74,34 @@ function initMap() {
   };
   const map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
+document.addEventListener('DOMContentLoaded', function () {
+// Array of swiper configurations
+const swiperConfigs = [
+  { container: '.view01', initialSlides: 1, spaceBetween: 10 },
+  { container: '.view02', initialSlides: 1, spaceBetween: 10 },
+  { container: '.view03', initialSlides: 1, spaceBetween: 10 },
+  { container: '.view04', initialSlides: 1, spaceBetween: 10 },
+  { container: '.view05', initialSlides: 1, spaceBetween: 10 }
+];
+
+// Loop through swiperConfigs to initialize Swiper instances
+swiperConfigs.forEach((config, index) => {
+  const swiper = new Swiper(config.container, {
+    slidesPerView: config.initialSlides,
+    spaceBetween: config.spaceBetween,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3
+      },
+    }
+  });
+});
+
+});
