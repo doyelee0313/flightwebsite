@@ -48,6 +48,12 @@ input::-webkit-search-results-decoration {
   }
 }
 
+@media (max-width: 630px) {
+  .searchBar_container {
+    padding: 0 14px;
+  }
+}
+
 .ticketing_container {
   background-color: white;
   margin-top: 30px;
@@ -250,6 +256,12 @@ input {
   border: 1px solid #222;
 }
 
+@media (max-width: 630px) {
+  .searchBar_decoBox {
+    height: 200px;
+  }
+}
+
 .searchBar_decoLine {
   background-color: #fdfdfd;
   border: 2px solid #308cf1;
@@ -345,5 +357,27 @@ input {
 @media (min-width: 845px) {
   .searchBar_decoBox {
     display: none;
+  }
+}
+
+@media (max-width: 630px) {
+  .mob_swapIcon {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  .mob_nav {
+    & ul {
+      margin-left: 0;
+    }
+
+    & button {
+      font-size: 18px;
+    }
+  }
+  .flight-destination-wrapper {
+    & button {
+      font-size: 22px;
+    }
   }
 }
