@@ -81,7 +81,7 @@ span {
   padding-bottom: 80px;
   padding-left: 100px;
   padding-right: 100px;
-  /* background-color: black; */
+  background-color: black;
 }
 .swiper-slide {
   display: flex;
@@ -201,10 +201,9 @@ textarea {
 
 /* nav-bar css  */
 
-nav {
-  color: #fff !important;
-  padding: 30px;
-  background-color: #000;
+.header_nav {
+  color: #333 !important;
+  /* padding: 30px; */
   position: relative;
 }
 
@@ -215,7 +214,8 @@ nav {
 }
 
 .trans-lan-grp a {
-  color: #fff !important;
+  color: #333 !important;
+  font-weight: 600;
 }
 
 .nav-container {
@@ -231,7 +231,7 @@ nav {
   width: 60%;
   height: 70px;
   border-radius: 500px;
-  background-color: hsla(0, 0%, 100%, 0.125);
+  background-color: hsla(0, 0%, 100%, 0.8);
 }
 
 .menu-item {
@@ -247,9 +247,8 @@ nav {
 }
 
 .menu-item a {
-  text-shadow: 0px -2px rgba(0, 0, 0, 0.44) !important;
   transition: all 0.1s;
-  color: #fff;
+  color: #333;
 }
 
 .menu-item a:active {
@@ -272,7 +271,7 @@ nav {
   font-weight: 500;
 }
 .member {
-  color: #fff !important;
+  color: #333;
   font-weight: 600;
 }
 span {
@@ -365,6 +364,7 @@ span {
     height: 35px;
   }
   .menu-bar-container {
+    padding: 0 20px;
     display: none;
   }
   .menu-item {

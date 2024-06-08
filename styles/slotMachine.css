@@ -21,6 +21,10 @@
   box-sizing: border-box;
 }
 
+#displayNone {
+  display: none;
+}
+
 /* ============================================================
    style 
    ============================================================ */
@@ -28,7 +32,7 @@
 .slot_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 8px;
 }
 
 .wrapper {

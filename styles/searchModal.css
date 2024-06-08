@@ -93,10 +93,14 @@
   height: 40px;
   cursor: pointer;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn span {
   width: 100%;
+  font-size: 12px;
 }
 
 .btn:hover {
