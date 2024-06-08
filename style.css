@@ -489,6 +489,10 @@ footer {
 }
 .footer-box1 {
   display: flex;
+  justify-content: center;
+}
+.footer-logo {
+  width: 100px;
 }
 
 .footer-box2-box {
