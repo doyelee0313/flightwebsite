@@ -14,200 +14,235 @@
     <title>project</title>
   </head>
   <body>
-    <div class="ticketing_container">
-      <form method="GET" action="" class="destination_box" id="searchForm">
-        <label for="destination">
-          <small>여행지</small>
-          <input type="search" name="query" placeholder="여행지 검색" />
-        </label>
-      </form>
-      <span class="separator separator1"></span>
-      <div class="checkIn_container">
-        <div class="checkIn_box">
-          <small>체크인</small>
-          <span>날짜 추가</span>
+    <article id="asdf">
+      <div class="ticketing_container">
+        <form method="GET" action="" class="destination_box" id="searchForm">
+          <label for="destination">
+            <small>여행지</small>
+            <input type="search" name="query" placeholder="여행지 검색" />
+          </label>
+        </form>
+        <span class="separator separator1"></span>
+        <div class="checkIn_container">
+          <div class="checkIn_box">
+            <small>체크인</small>
+            <span>날짜 추가</span>
+          </div>
         </div>
-      </div>
-      <span class="separator separator2"></span>
-      <div class="checkOut_container">
-        <div class="checkOut_box">
-          <small>체크아웃</small>
-          <span>날짜 추가</span>
+        <span class="separator separator2"></span>
+        <div class="checkOut_container">
+          <div class="checkOut_box">
+            <small>체크아웃</small>
+            <span>날짜 추가</span>
+          </div>
         </div>
-      </div>
-      <span class="separator separator3"></span>
-      <div class="guest_container">
-        <div class="guest_box">
-          <small>여행자</small>
-          <span>게스트 추가</span>
+        <span class="separator separator3"></span>
+        <div class="guest_container">
+          <div class="guest_box">
+            <small>여행자</small>
+            <span>게스트 추가</span>
+          </div>
         </div>
+        <button class="ticketing_btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
-      <button class="ticketing_btn">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </div>
 
-    <div id="modal">
-      <div class="container modal">
-        <article class="wrapper">
-          <div class="title">지역으로 검색하기</div>
-          <div class="search-options">
-            <div class="option">
-              <button>
-                <img
-                  src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg?im_w=320"
-                  alt="세계지도"
-                />
-              </button>
-              <span>유연한 검색</span>
-            </div>
-            <div class="option">
-              <button>
-                <img
-                  src="https://a0.muscache.com/im/pictures/7b5cf816-6c16-49f8-99e5-cbc4adfd97e2.jpg?im_w=320"
-                  alt="유럽 지도"
-                />
-              </button>
-              <span>유럽</span>
-            </div>
-            <div class="option">
-              <button>
-                <img
-                  src="https://a0.muscache.com/im/pictures/26891a81-b9db-4a9c-8aab-63486b7e627c.jpg?im_w=320"
-                  alt="일본 지도"
-                />
-              </button>
-              <span>일본</span>
-            </div>
-            <div class="option">
-              <button>
-                <img
-                  src="https://a0.muscache.com/im/pictures/d77de9f5-5318-4571-88c7-e97d2355d20a.jpg?im_w=320"
-                  alt="동남아시아 지도"
-                />
-              </button>
-              <span>동남아시아</span>
+      <div class="searchBar_decoBox">
+        <div class="searchBar_decoLine">
+          <div class="mobile_searchBar__container">
+            <nav class="mob_nav">
+              <ul>
+                <li>
+                  <button>왕복</button>
+                </li>
+                <li>
+                  <button>편도</button>
+                </li>
+                <li>
+                  <button>다구간</button>
+                </li>
+              </ul>
+            </nav>
+            <div class="flight-destination-wrapper">
+              <div class="mob_startingPoint">
+                <button type="button">서울(김포)</button>
+              </div>
+              <div class="mob_swapIcon">
+                <span>
+                  <i class="fa-solid fa-right-left"></i>
+                </span>
+              </div>
+              <div class="mob_destination">
+                <button type="button">도착지</button>
+              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </div>
 
-        <article class="wrapper">
-          <div class="title">한국</div>
-          <div class="btn_wrapper">
-            <button class="btn btn__korea">
-              <span>서울</span>
-            </button>
-            <button class="btn btn__korea">
-              <span>부산</span>
-            </button>
-            <button class="btn btn__korea">
-              <span>속초</span>
-            </button>
-            <button class="btn btn__korea">
-              <span>강릉</span>
-            </button>
-            <button class="btn btn__korea">
-              <span>전주</span>
-            </button>
-            <button class="btn btn__korea">
-              <span>대구</span>
-            </button>
-            <button class="btn btn__korea">
-              <span>경주</span>
-            </button>
-            <button class="btn btn__korea">
-              <span>여수</span>
-            </button>
-            <button class="btn btn__korea">
-              <span>서귀포</span>
-            </button>
-            <button class="btn btn__korea">
-              <span>대전</span>
-            </button>
-            <button class="btn btn__korea">
-              <span>제주도</span>
-            </button>
-            <button class="btn btn__korea">
-              <span>인천</span>
-            </button>
-          </div>
-        </article>
-
-        <article class="wrapper">
-          <nav class="modal-content">
-            <button class="scroll-btn" id="scroll-left">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <div class="nav_container">
-              <button class="nav_btn active">
-                <span>전 세계</span>
-              </button>
-              <button class="nav_btn">
-                <span>동아시아</span>
-              </button>
-              <button class="nav_btn">
-                <span>동남아시아</span>
-              </button>
-              <button class="nav_btn">
+      <div id="modal">
+        <div class="container modal">
+          <article class="modal_section">
+            <div class="title">지역으로 검색하기</div>
+            <div class="search-options">
+              <div class="option">
+                <button>
+                  <img
+                    src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg?im_w=320"
+                    alt="세계지도"
+                  />
+                </button>
+                <span>유연한 검색</span>
+              </div>
+              <div class="option">
+                <button>
+                  <img
+                    src="https://a0.muscache.com/im/pictures/7b5cf816-6c16-49f8-99e5-cbc4adfd97e2.jpg?im_w=320"
+                    alt="유럽 지도"
+                  />
+                </button>
                 <span>유럽</span>
+              </div>
+              <div class="option">
+                <button>
+                  <img
+                    src="https://a0.muscache.com/im/pictures/26891a81-b9db-4a9c-8aab-63486b7e627c.jpg?im_w=320"
+                    alt="일본 지도"
+                  />
+                </button>
+                <span>일본</span>
+              </div>
+              <div class="option">
+                <button>
+                  <img
+                    src="https://a0.muscache.com/im/pictures/d77de9f5-5318-4571-88c7-e97d2355d20a.jpg?im_w=320"
+                    alt="동남아시아 지도"
+                  />
+                </button>
+                <span>동남아시아</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="modal_section">
+            <div class="title">한국</div>
+            <div class="btn_wrapper">
+              <button class="btn btn__korea">
+                <span>서울</span>
               </button>
-              <button class="nav_btn">
-                <span>북남미</span>
+              <button class="btn btn__korea">
+                <span>부산</span>
               </button>
-              <button class="nav_btn">
-                <span>오세아니아</span>
+              <button class="btn btn__korea">
+                <span>속초</span>
               </button>
-              <button class="nav_btn">
-                <span>기타 아시아 지역</span>
+              <button class="btn btn__korea">
+                <span>강릉</span>
               </button>
-              <button class="nav_btn">
-                <span>아프리카</span>
+              <button class="btn btn__korea">
+                <span>전주</span>
+              </button>
+              <button class="btn btn__korea">
+                <span>대구</span>
+              </button>
+              <button class="btn btn__korea">
+                <span>경주</span>
+              </button>
+              <button class="btn btn__korea">
+                <span>여수</span>
+              </button>
+              <button class="btn btn__korea">
+                <span>서귀포</span>
+              </button>
+              <button class="btn btn__korea">
+                <span>대전</span>
+              </button>
+              <button class="btn btn__korea">
+                <span>제주도</span>
+              </button>
+              <button class="btn btn__korea">
+                <span>인천</span>
               </button>
             </div>
-            <button class="scroll-btn" id="scroll-right">
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-          </nav>
-          <div class="btn_wrapper">
-            <button class="btn btn__world">
-              <span>오사카</span>
-            </button>
-            <button class="btn btn__world">
-              <span>도쿄</span>
-            </button>
-            <button class="btn btn__world">
-              <span>후쿠오카</span>
-            </button>
-            <button class="btn btn__world">
-              <span>방콕</span>
-            </button>
-            <button class="btn btn__world">
-              <span>런던</span>
-            </button>
-            <button class="btn btn__world">
-              <span>치앙마이</span>
-            </button>
-            <button class="btn btn__world">
-              <span>타이베이</span>
-            </button>
-            <button class="btn btn__world">
-              <span>시드니</span>
-            </button>
-            <button class="btn btn__world">
-              <span>삿포로</span>
-            </button>
-            <button class="btn btn__world">
-              <span>그린델발트</span>
-            </button>
-            <button class="btn btn__world">
-              <span>바르셀로나</span>
-            </button>
-            <button class="btn btn__world">
-              <span>인터라켄</span>
-            </button>
-          </div>
-        </article>
+          </article>
+
+          <article class="modal_section">
+            <nav class="modal-content">
+              <button class="scroll-btn" id="scroll-left">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <div class="nav_container">
+                <button class="nav_btn active">
+                  <span>전 세계</span>
+                </button>
+                <button class="nav_btn">
+                  <span>동아시아</span>
+                </button>
+                <button class="nav_btn">
+                  <span>동남아시아</span>
+                </button>
+                <button class="nav_btn">
+                  <span>유럽</span>
+                </button>
+                <button class="nav_btn">
+                  <span>북남미</span>
+                </button>
+                <button class="nav_btn">
+                  <span>오세아니아</span>
+                </button>
+                <button class="nav_btn">
+                  <span>기타 아시아 지역</span>
+                </button>
+                <button class="nav_btn">
+                  <span>아프리카</span>
+                </button>
+              </div>
+              <button class="scroll-btn" id="scroll-right">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </nav>
+            <div class="btn_wrapper">
+              <button class="btn btn__world">
+                <span>오사카</span>
+              </button>
+              <button class="btn btn__world">
+                <span>도쿄</span>
+              </button>
+              <button class="btn btn__world">
+                <span>후쿠오카</span>
+              </button>
+              <button class="btn btn__world">
+                <span>방콕</span>
+              </button>
+              <button class="btn btn__world">
+                <span>런던</span>
+              </button>
+              <button class="btn btn__world">
+                <span>치앙마이</span>
+              </button>
+              <button class="btn btn__world">
+                <span>타이베이</span>
+              </button>
+              <button class="btn btn__world">
+                <span>시드니</span>
+              </button>
+              <button class="btn btn__world">
+                <span>삿포로</span>
+              </button>
+              <button class="btn btn__world">
+                <span>그린델발트</span>
+              </button>
+              <button class="btn btn__world">
+                <span>바르셀로나</span>
+              </button>
+              <button class="btn btn__world">
+                <span>인터라켄</span>
+              </button>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
+    </article>
   </body>
 </html>

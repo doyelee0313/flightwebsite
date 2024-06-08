@@ -24,30 +24,44 @@ input::-webkit-search-results-decoration {
   box-sizing: border-box;
 }
 
+.searchBar_container {
+  background-image: url("https://images.pexels.com/photos/91217/pexels-photo-91217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 466px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px;
+}
+
 .ticketing_container {
   background-color: white;
   margin-top: 30px;
   display: flex;
   align-items: center;
-  border-radius: 33px;
+  border-radius: 45px;
   border: 1px solid #ddd;
   display: flex;
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
-  max-width: 850px;
+  max-width: 100%;
+  height: 85px;
   width: 100%;
   position: relative;
 
   & small {
     padding-bottom: 2px;
     line-height: 16px;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
   }
 
   & span {
     font-weight: 400;
     line-height: 18px;
-    font-size: 14px;
+    font-size: 20px;
     color: #222;
   }
 }
@@ -74,26 +88,33 @@ input {
 }
 
 .destination_box {
-  border-radius: 32px;
+  border-radius: 45px;
   flex: 2;
   height: 100%;
+  display: flex;
+
+  width: 100%;
 
   & label {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 6px;
     padding: 14px 32px;
+    width: inherit;
     height: 100%;
     cursor: pointer;
   }
 
   & input {
     padding: 0;
+    height: 24px;
   }
 
   & input::placeholder {
     font-weight: 400;
     line-height: 18px;
-    font-size: 14px;
+    font-size: 20px;
     color: #222;
   }
 }
@@ -107,7 +128,7 @@ input {
 }
 
 .checkIn_container {
-  border-radius: 32px;
+  border-radius: 45px;
   cursor: pointer;
   flex: 1;
   height: 100%;
@@ -119,13 +140,17 @@ input {
 
 .checkIn_box {
   display: flex;
-  height: 100%;
   flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  height: 100%;
+  width: inherit;
   padding: 14px 24px;
 }
 
 .checkOut_container {
-  border-radius: 32px;
+  height: 100%;
+  border-radius: 45px;
   cursor: pointer;
   flex: 1;
 }
@@ -137,17 +162,20 @@ input {
 .checkOut_box {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: inherit;
+  gap: 8px;
   padding: 14px 24px;
 }
 
 .guest_container {
-  border-radius: 32px;
+  border-radius: 45px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex: 2;
-  /* width: auto; */
+  height: 100%;
 }
 
 .guest_container:hover {
@@ -158,6 +186,8 @@ input {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 8px;
   padding: 14px 24px;
 }
 
@@ -165,13 +195,13 @@ input {
   position: absolute;
   right: 0;
   border: none;
-  border-radius: 24px;
+  border-radius: 50%;
   background-color: #ff385c;
   color: white;
   cursor: pointer;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
+  width: 62px;
+  height: 62px;
+  font-size: 24px;
   margin-right: 8px;
 }
 
@@ -185,4 +215,118 @@ input {
 
 .separator.hidden {
   visibility: hidden;
+}
+
+@media (max-width: 844px) {
+  .ticketing_container {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Mobile version searchBar Styles
+   ============================================================ */
+
+.searchBar_decoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 844px;
+  width: 100%;
+  height: 400px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #222;
+}
+
+.searchBar_decoLine {
+  background-color: #fdfdfd;
+  border: 2px solid #308cf1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
+  height: 97%;
+}
+
+.mobile_searchBar__container {
+  width: 90%;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mob_nav {
+  & ul {
+    display: flex;
+    margin-left: 35px;
+  }
+
+  & button {
+    border: none;
+    background-color: white;
+    font-size: 24px;
+    font-weight: 700;
+    color: #888;
+  }
+  & button:hover {
+    color: #f65307;
+    border-bottom: 3px solid #f65307;
+  }
+}
+
+.flight-destination-wrapper {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  width: inherit;
+
+  & button {
+    height: 80px;
+    font-size: 35px;
+    font-weight: 700;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+}
+
+.mob_destination button {
+  color: #aaa;
+}
+
+.mob_icon__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.mob_swapIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+  border: 3px solid #aaa;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#asdf {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 845px) {
+  .searchBar_decoBox {
+    display: none;
+  }
 }
