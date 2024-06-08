@@ -145,6 +145,14 @@ function initMap() {
   };
   const map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
+
+function moveCamera(lat, lng) {
+  const position = { lat: lat, lng: lng };
+  map.setCenter(position);
+  map.setZoom(10); // Adjust zoom level if needed
+}
+
+/* 여행 추천 배너 화면조정 */
 document.addEventListener('DOMContentLoaded', function () {
 // Array of swiper configurations
 const swiperConfigs = [
