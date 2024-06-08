@@ -24,17 +24,22 @@ input::-webkit-search-results-decoration {
   box-sizing: border-box;
 }
 
+.main_section__search {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .searchBar_container {
   background-image: url("https://images.pexels.com/photos/91217/pexels-photo-91217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 466px;
+  height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 40px;
-  padding: 50px;
+  gap: 150px;
+  padding: 20px 70px;
 }
 
 .ticketing_container {
