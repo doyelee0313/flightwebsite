@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: #6a6a6a;
+  color: black;
   text-decoration: none;
   margin-top: 4px;
   border: none;
@@ -71,6 +71,7 @@ span {
   padding-bottom: 80px;
   padding-left: 100px;
   padding-right: 100px;
+  background-color: black;
 }
 .swiper-slide {
   display: flex;
@@ -152,7 +153,7 @@ span {
 
 .banner h1 {
     font-size: 28px; 
-    color: white; 
+    color: black; 
     margin: 0;
     padding: 0;
 }
