@@ -436,6 +436,29 @@ footer {
 .ft-icon {
   width: 32px;
   height: 32px;
+  position: relative;
+  display: inline-block;
+}
+
+.ft-icon img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.ft-icon img.on {
+  opacity: 0;
+}
+
+.ft-icon:hover img.on {
+  opacity: 1;
+}
+
+.ft-icon:hover img.off {
+  opacity: 0;
 }
 
 .footer-social {

@@ -105,18 +105,18 @@ window.initMap = function () {
     // const zoom = btn.dataset.zoom;
     /* 이미지(여행지)를 클릭하면, 그 나라에 대한 위치 정보값을 가져와 그 위치로 마커를 표시 */
     btn.addEventListener("click", () => {
-      console.log("들어옴");
-      const mapMarker = new google.maps.Marker({
-        position: { lat: Number(lat), lng: Number(lng) },
-        label: `${label}`,
-        // zoom: `${zoom}`, 확대기능은 아직 구현 안해서 zoom값은 삭제 비활성화함
-        map: map,
+      var myLatlng = new google.maps.LatLng(Number(lat), Number(lng));
+      var mapOptions = {
+        zoom: 10,
+        center: myLatlng,
+      };
+      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        title: "Hello World!",
       });
-      /* 마커를 클릭하면, 그에 대한 포지션으로 이동 및 확대 */
-      mapMarker.addListener("click", () => {
-        map.setCenter(mapMarker.position);
-        map.setZoom(10);
-      });
+      // To add the marker to the map, call setMap();
+      marker.setMap(map);
     });
   });
 };
