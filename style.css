@@ -67,6 +67,8 @@ span {
   transform: scale(1.1);
   color: #ff385c;
 }
+
+
 .navbar-nav {
   display: flex;
   flex-wrap: wrap;
@@ -95,7 +97,8 @@ span {
   transform: translateY(-50%);
   z-index: 10;
   color: black;
-  padding: 100px;
+  padding: 20px;
+  font-size: 20px;
 }
 .card {
   flex: 0 1 auto;
