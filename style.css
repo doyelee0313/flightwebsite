@@ -1,3 +1,15 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import "./styles/slotMachine.css";
+@import "./styles/searchBar.css";
+@import "./styles/searchModal.css";
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*main 여행지 추천 css*/
 
 .nav-tabs {
@@ -12,15 +24,37 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: #6a6a6a;
+  color: black;
   text-decoration: none;
   margin-top: 4px;
   border: none;
+}
+.icon-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  z-index: 1;
+}
+
+.icon-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #6a6a6a;
+  border-radius: 50%;
+  z-index: -1;
+  font-size: 50px;
 }
 span {
   color: #6a6a6a;
   text-decoration: none;
 }
+
 .icon-fixed-size {
   font-size: 15px;
   width: 20px;
@@ -33,39 +67,61 @@ span {
   transform: scale(1.1);
   color: #ff385c;
 }
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 80px;
+  padding-left: 100px;
+  padding-right: 100px;
+  /* background-color: black; */
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: white;
+  padding: 100px;
+}
+.card {
+  flex: 0 1 auto;
+  border-radius: 15px;
+  background: none;
+  width: 100%;
+  height: 600px;
+}
+
 .image-container {
   width: 100%;
   height: 600px;
   overflow: hidden;
+  border: none;
+  position: relative;
+  border-radius: 15px;
+  background: none;
+  padding: 30px;
 }
+
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-@media (max-width: 992px) {
-  .nav-tabs {
-    justify-content: space-around;
-  }
-
-  .nav-item {
-    flex: 1 1 45%; /* 2 items per row */
-    max-width: 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-item {
-    flex: 1 1 45%; /* 2 items per row */
-    max-width: 45%;
-  }
-}
-
-@media (max-width: 576px) {
-  .nav-item {
-    flex: 1 1 100%; /* 1 item per row */
-    max-width: 100%;
-  }
+  border-radius: 15px;
+  background: none;
 }
 .overlay {
   position: absolute;
@@ -102,12 +158,12 @@ span {
 
 .banner {
   text-align: center;
-  padding: 20px 0;
-  background-color: #f8f9fa;
+  padding: 50px;
 }
+
 .banner h1 {
   font-size: 28px;
-  color: #333;
+  color: black;
   margin: 0;
   padding: 0;
 }
@@ -135,16 +191,6 @@ textarea {
   font-family: "Noto Sans KR", sans-serif;
 }
 
-/* 지워도 되는 CSS */
-
-body {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #000;
-  background-position-y: -200px;
-}
-
 /* common font style */
 
 .noto-sans-kr {
@@ -155,33 +201,27 @@ body {
 
 /* nav-bar css  */
 
-.header_nav {
-  /* background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position-y: -300px; */
-  /* font-family: "popins", sans-serif; */
-  color: #fff;
-
-  /* padding-bottom: 50px; */
-  /* margin-bottom: 200px; */
+nav {
+  color: #fff !important;
+  padding: 30px;
+  background-color: #000;
+  position: relative;
 }
 
 .trans-lan-grp {
   text-align: right;
   font-weight: 600;
   padding-right: 10px;
-  color: #373747;
+}
+
+.trans-lan-grp a {
+  color: #fff !important;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo-img {
-  width: 20%;
 }
 
 .menu-bar-container {
@@ -191,9 +231,7 @@ body {
   width: 60%;
   height: 70px;
   border-radius: 500px;
-  color: #373747;
-  background-color: hsla(0, 0%, 100%, 0.85);
-  /* background-color: black; */
+  background-color: hsla(0, 0%, 100%, 0.125);
 }
 
 .menu-item {
@@ -209,8 +247,9 @@ body {
 }
 
 .menu-item a {
-  /* text-shadow: 0px -2px rgba(0, 0, 0, 0.44); */
+  text-shadow: 0px -2px rgba(0, 0, 0, 0.44) !important;
   transition: all 0.1s;
+  color: #fff;
 }
 
 .menu-item a:active {
@@ -228,13 +267,14 @@ body {
 
 .login-signup-container {
   width: 20%;
-  /* align-self: center; */
-  color: #373747;
   text-align: right;
   padding: 8px 10px;
+  font-weight: 500;
+}
+.member {
+  color: #fff !important;
   font-weight: 600;
 }
-
 span {
   line-height: 1.2;
 }
@@ -242,11 +282,28 @@ span {
 .hamburger-btn {
   display: none;
 }
+#bk-mode-blure {
+  margin-bottom: 0;
+}
 
 /* 미디어쿼리 시작 */
 /* mobile size */
 
 @media screen and (max-width: 600px) {
+  .is-active {
+    height: 100vh;
+    max-height: 100vh;
+    opacity: 0.6;
+  }
+
+  .bk-layer {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 110;
+  }
   nav {
     padding: 0;
   }
@@ -254,8 +311,8 @@ span {
     display: none;
   }
   .logo-img img {
-    width: 110px;
-    height: 110px;
+    width: 35px;
+    height: 35px;
   }
   .menu-bar-container {
     display: none;
@@ -283,6 +340,20 @@ span {
 /* tablet size */
 
 @media screen and (min-width: 600px) and (max-width: 992px) {
+  .is-active {
+    height: 100vh;
+    max-height: 100vh;
+    opacity: 0.6;
+  }
+
+  .bk-layer {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 110;
+  }
   nav {
     padding: 0;
   }
@@ -290,8 +361,8 @@ span {
     display: none;
   }
   .logo-img img {
-    width: 110px;
-    height: 110px;
+    width: 35px;
+    height: 35px;
   }
   .menu-bar-container {
     display: none;
@@ -319,15 +390,26 @@ span {
 
 /* 지도 관련 css */
 
+.map-title h2 {
+  padding: 20px 0;
+  color: #000;
+  text-align: center;
+  background-color: #f8f9fa;
+  margin-top: 8px;
+}
+
 .map {
   height: 100%;
 }
 
 .map-container {
-  width: 100%;
-  height: 400px;
+  width: 70%;
+  height: 350px;
   border: 1px solid white;
+  margin: 0 auto;
 }
+
+/* footer css */
 
 footer {
   font-family: Arial, sans-serif;
@@ -379,6 +461,8 @@ footer {
   font-weight: 900;
 }
 
+/* footer media query */
+
 @media screen and (max-width: 800px) {
   .container-fluid {
     display: flex;
@@ -400,4 +484,55 @@ footer {
     display: flex;
     text-align: center;
   }
+}
+
+/* mobile, tablet size - show modal menu */
+
+.modal-box {
+  visibility: hidden;
+  opacity: 0;
+  max-width: 302px;
+  width: 300px;
+  right: 0;
+  top: 0;
+  transform: translate(-14px, 14px);
+  position: fixed;
+  z-index: 900;
+  padding: 40px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-weight: 600;
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  background-color: hsla(0, 0%, 100%, 0.188);
+}
+
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-50%, 50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+}
+.choice-lan {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+}
+.choice-lan span {
+  color: #ccc;
+}
+.modal-box ul {
+  margin-bottom: 48px;
+}
+.modal-box ul li {
+  font-size: 24px;
+  margin: 16px 0 16px;
+  height: 38px;
+  cursor: pointer;
+  color: #ffffff;
 }
