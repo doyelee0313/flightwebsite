@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 /* 구글 지도 생성 */
 
+
 window.initMap = function () {
   //구글에서 지원하는 Map클래스의 인스턴스(지도)를 만들어 map에 할당함
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -135,3 +136,44 @@ window.initMap = function () {
     });
   });
 };
+
+function initMap() {
+  // 구글 지도
+  const mapOptions = {
+    center: new google.maps.LatLng(51.508742, -0.12085), // 위도랑 경도
+    zoom: 3,
+  };
+  const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+document.addEventListener('DOMContentLoaded', function () {
+// Array of swiper configurations
+const swiperConfigs = [
+  { container: '.view01', initialSlides: 1, spaceBetween: 10 },
+  { container: '.view02', initialSlides: 1, spaceBetween: 10 },
+  { container: '.view03', initialSlides: 1, spaceBetween: 10 },
+  { container: '.view04', initialSlides: 1, spaceBetween: 10 },
+  { container: '.view05', initialSlides: 1, spaceBetween: 10 }
+];
+
+// Loop through swiperConfigs to initialize Swiper instances
+swiperConfigs.forEach((config, index) => {
+  const swiper = new Swiper(config.container, {
+    slidesPerView: config.initialSlides,
+    spaceBetween: config.spaceBetween,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3
+      },
+    }
+  });
+});
+
+});
+
